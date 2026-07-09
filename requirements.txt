@@ -1,0 +1,49 @@
+# BurpSaver — Requirements
+#
+# BurpSaver is a Burp Suite extension written in Python 2.7 (Jython).
+# It has NO pip-installable Python dependencies.
+# All imports are either Python 2.7 stdlib or Java/Burp APIs
+# that are available automatically inside the Jython runtime.
+#
+# ── What you actually need to install ─────────────────────────────────────────
+
+# 1. Burp Suite Community Edition (free)
+#    https://portswigger.net/burp/communitydownload
+#    Any version from 2022 onwards is supported.
+
+# 2. Jython Standalone JAR 2.7.3+
+#    https://www.jython.org/download
+#    Download: jython-standalone-2.7.3.jar
+#    Configure in Burp: Extensions → Extension settings → Python Environment
+#
+#    Do NOT use jython-installer-*.jar — you need the standalone JAR.
+#    Do NOT use Python 3 or CPython — Burp's extension API requires Jython 2.7.
+
+# 3. Java 8 or later (required by Burp Suite itself)
+#    https://adoptium.net/
+#    Check your version: java -version
+
+# ── Python stdlib modules used (all included in Jython 2.7) ───────────────────
+# base64
+# datetime
+# threading
+# traceback
+# json
+
+# ── Java APIs used (included in the JVM, no install needed) ───────────────────
+# java.io.*
+# java.util.zip.*
+# java.nio.charset.*
+# java.lang.String
+# javax.swing.*
+# java.awt.*
+# java.util.*
+
+# ── Burp APIs used (provided by Burp Suite itself) ────────────────────────────
+# burp.IBurpExtender
+# burp.ITab
+# burp.IExtensionStateListener
+# burp.IContextMenuFactory
+# burp.IHttpRequestResponse
+# burp.IHttpListener
+# burp.IMessageEditorController
