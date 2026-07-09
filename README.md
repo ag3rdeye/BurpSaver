@@ -2,7 +2,7 @@
 
 **Full session save and restore for Burp Suite Community Edition.**
 
-Burp Suite Community Edition does not persist your session between restarts — when you close Burp, your entire Proxy History, Repeater tabs, and captured traffic are gone. BurpSaver solves this by letting you export your full session to a `.bsave` file and restore it exactly as you left it the next time you open Burp.
+Burp Suite Community Edition does not persist your session between restarts - when you close Burp, your entire Proxy History, Repeater tabs, and captured traffic are gone. BurpSaver solves this by letting you export your full session to a `.bsave` file and restore it exactly as you left it the next time you open Burp.
 
 ![Python](https://img.shields.io/badge/python-2.7%20%28Jython%29-blue)
 ![Burp Suite](https://img.shields.io/badge/Burp%20Suite-Community%20Edition-orange)
