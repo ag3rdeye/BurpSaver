@@ -1,8 +1,8 @@
-# BurpSaver — Usage Guide
+# BurpSaver - Usage Guide
 
 ## Table of Contents
 
-1. [First-Time Setup](#1-first-time-setup)
+1. [First Time Setup](#1-first-time-setup)
 2. [Understanding the Interface](#2-understanding-the-interface)
 3. [Capturing Traffic](#3-capturing-traffic)
 4. [Viewing and Filtering History](#4-viewing-and-filtering-history)
@@ -53,26 +53,27 @@ You should see a new **BurpSaver** tab appear in Burp's main tab bar with sub-ta
 ### Tab Overview
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
-│  Proxy History (N)  │  Repeater Store (N)  │  Activity Store (N) │  Settings  │  Diagnostics  │
-├─────────────────────────────────────────────────────────────────┤
-│  Filter: [_______________]  Clear   N entries                   │
-├─────────────────────────────────────────────────────────────────┤
-│  #  │ Host  │ Method │ URL  │ Params │ Status │ Length │ MIME … │
-│─────────────────────────────────────────────────────────────────│
-│  1  │ ...   │  GET   │ ...  │   3    │  200   │  1053  │ HTML  │
-│  2  │ ...   │  POST  │ ...  │   12   │  204   │   694  │ HTML  │
-│  …                                                              │
-├──────────────────────────────┬──────────────────────────────────┤
-│  Request                     │  Response                        │
-│  Pretty  Raw  Hex            │  Pretty  Raw  Hex  Render        │
-│                              │                                  │
-│  GET /path HTTP/1.1          │  HTTP/1.1 200 OK                │
-│  Host: example.com           │  Content-Type: text/html        │
-│  …                           │  …                               │
-├─────────────────────────────────────────────────────────────────┤
-│  [Export Session]  [Load Session]  [Refresh]   Proxy: N entries │
-└─────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Proxy History (N) │ Repeater Store (N) │ Activity Store (N) │ Settings │ Diagnostics        │
+├─────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Filter: [_______________]   Clear                                  N entries                │
+├─────────────────────────────────────────────────────────────────────────────────────────────┤
+│ # │ Host │ Method │ URL │ Params │ Status │ Length │ MIME                                   │
+├───┼──────┼────────┼─────┼────────┼────────┼────────┼────────────────────────────────────────┤
+│ 1 │ ...  │ GET    │ ... │      3 │    200 │   1053 │ HTML                                   │
+│ 2 │ ...  │ POST   │ ... │     12 │    204 │    694 │ HTML                                   │
+│ … │      │        │     │        │        │        │                                        │
+├────────────────────────────────────────────┬────────────────────────────────────────────────┤
+│ Request                                    │ Response                                       │
+├────────────────────────────────────────────┼────────────────────────────────────────────────┤
+│ Pretty  Raw  Hex                           │ Pretty  Raw  Hex  Render                       │
+│                                            │                                                │
+│ GET /path HTTP/1.1                         │ HTTP/1.1 200 OK                                │
+│ Host: example.com                          │ Content-Type: text/html                        │
+│ …                                          │ …                                              │
+├─────────────────────────────────────────────────────────────────────────────────────────────┤
+│ [Export Session]  [Load Session]  [Refresh]                     Proxy: N entries            │
+└─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Bottom Bar Buttons
@@ -102,7 +103,7 @@ You should see a new **BurpSaver** tab appear in Burp's main tab bar with sub-ta
 
 ## 3. Capturing Traffic
 
-BurpSaver captures traffic **automatically** — no configuration needed.
+BurpSaver captures traffic **automatically** - no configuration needed.
 
 Every request passing through Burp's proxy is stored in the **Activity Store** tab as it happens. You can see the count update in the tab title: `Activity Store (247)`.
 
@@ -116,11 +117,11 @@ The **Proxy History** tab shows Burp's own proxy history. Click **Refresh** to s
 
 ### Clicking a Row
 
-Click any row in the table to load its full request and response into the editors below. The editors are Burp's native message editors — you get Pretty, Raw, Hex, and (for responses) Render views exactly like Burp's own proxy history.
+Click any row in the table to load its full request and response into the editors below. The editors are Burp's native message editors - you get Pretty, Raw, Hex, and (for responses) Render views exactly like Burp's own proxy history.
 
 ### Using the Filter
 
-Type any text into the **Filter** box — the table instantly narrows to rows that match in any column (host, URL, method, status, MIME type, etc.).
+Type any text into the **Filter** box - the table instantly narrows to rows that match in any column (host, URL, method, status, MIME type, etc.).
 
 Examples:
 
@@ -180,11 +181,11 @@ After loading, check each location:
 | What was saved | Where it appears after load |
 |---|---|
 | Proxy History | BurpSaver **Proxy History** tab + Burp's **Target → Site map** |
-| Repeater Store | Burp's native **Repeater** tab (check there — new tabs are added) |
+| Repeater Store | Burp's native **Repeater** tab (check there - new tabs are added) |
 | Activity Store | BurpSaver **Activity Store** tab |
 | Sitemap | Burp **Target → Site map** |
 
-> **Note:** After loading, click **Refresh** on the Proxy History tab if the count shows 0 — the first load may require a refresh to display.
+> **Note:** After loading, click **Refresh** on the Proxy History tab if the count shows 0 - the first load may require a refresh to display.
 
 ---
 
@@ -195,7 +196,7 @@ Auto-save protects you if Burp crashes or you forget to export.
 **Setup:**
 
 1. Go to the **Settings** tab
-2. Set "Auto-save every N captured requests" — e.g. `100`
+2. Set "Auto-save every N captured requests" - e.g. `100`
 3. Click **Browse** and choose a destination file
 4. Click **Apply**
 
@@ -219,7 +220,7 @@ Click the **Repeater Store** tab. The count in the tab title shows how many you 
 
 **After loading a session:**
 
-Saved repeater requests are sent directly to Burp's native Repeater tab — you'll see new tabs appear there with your saved requests ready to replay.
+Saved repeater requests are sent directly to Burp's native Repeater tab - you'll see new tabs appear there with your saved requests ready to replay.
 
 ---
 
@@ -235,7 +236,7 @@ The **Diagnostics** tab shows an internal log of what BurpSaver is doing. Use it
 | `_py_to_java_bytes: in_len=4540 out_type=array out_len=4540` | Byte conversion working |
 | `setMessage OK (via invokeLater)` | Editor loaded successfully |
 | `req preview: 'GET /path HTTP/1.1\r\n...'` | Confirms real HTTP, not garbage |
-| `ERROR:` | Something went wrong — copy this and file an issue |
+| `ERROR:` | Something went wrong - copy this and file an issue |
 
 **Buttons in Diagnostics:**
 
@@ -249,7 +250,7 @@ The **Diagnostics** tab shows an internal log of what BurpSaver is doing. Use it
 
 ## 10. Typical Security Research Workflow
 
-### Day 1 — Starting an Engagement
+### Day 1 - Starting an Engagement
 
 ```
 1. Open Burp Suite Community
@@ -262,7 +263,7 @@ The **Diagnostics** tab shows an internal log of what BurpSaver is doing. Use it
 8. Close Burp
 ```
 
-### Day 2 — Continuing
+### Day 2 - Continuing
 
 ```
 1. Open Burp Suite Community
@@ -293,10 +294,10 @@ OR configure Auto-Save to do this automatically
 
 ## Tips for Large Sessions
 
-- Use the **Filter** to narrow down before scrolling — the filter is instant even with thousands of rows
-- Export frequently — a 10,000 request session file is typically 5–15 MB compressed
-- If load is slow, it's normal — Burp's sitemap restore is the slowest part
-- The Activity Store tab is your most complete record — Proxy History only shows what Burp's own filter lets through
+- Use the **Filter** to narrow down before scrolling - the filter is instant even with thousands of rows
+- Export frequently - a 10,000 request session file is typically 5–15 MB compressed
+- If load is slow, it's normal - Burp's sitemap restore is the slowest part
+- The Activity Store tab is your most complete record - Proxy History only shows what Burp's own filter lets through
 
 ---
 
@@ -312,4 +313,4 @@ BurpSaver inherits Burp's standard keyboard behaviour in the editors:
 
 ---
 
-*BurpSaver v5.8.0 — Created by Thirdeye*
+*BurpSaver v5.8.0 - Created by Thirdeye*
