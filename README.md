@@ -17,7 +17,7 @@ Burp Suite Community Edition does not persist your session between restarts - wh
 |---|---|
 | **Proxy History viewer** | Browse all captured traffic with filter, side-by-side request/response editors |
 | **Export Session** | Save Proxy History + Repeater Store + Activity Store to a single `.bsave` file |
-| **Load Session** | Restore a previous session — history, repeater tabs, sitemap all come back |
+| **Load Session** | Restore a previous session - history, repeater tabs, sitemap all come back |
 | **Activity Store** | Auto-captures every request passing through Burp's proxy in real time |
 | **Repeater Store** | Save interesting requests to revisit across sessions |
 | **Auto-save** | Configurable auto-export every N captured requests |
@@ -27,7 +27,7 @@ Burp Suite Community Edition does not persist your session between restarts - wh
 
 ## Why `.bsave` and Not `.burp`?
 
-Burp Pro's `.burp` format is a proprietary binary (Java serialized) format that Portswigger has not documented. BurpSaver uses **gzip-compressed NDJSON** instead — meaning your session files are:
+Burp Pro's `.burp` format is a proprietary binary (Java serialized) format that Portswigger has not documented. BurpSaver uses **gzip-compressed NDJSON** instead - meaning your session files are:
 
 - Readable outside Burp (`gunzip session.bsave | python -m json.tool`)
 - Portable across Burp versions
@@ -53,7 +53,7 @@ Burp Pro's `.burp` format is a proprietary binary (Java serialized) format that 
 | Java | 8 or later |
 | Operating System | Windows, macOS, Linux |
 
-Python 3 is **not** supported — Burp's extension API requires Jython 2.7.
+Python 3 is **not** supported - Burp's extension API requires Jython 2.7.
 
 ---
 
@@ -139,21 +139,6 @@ with gzip.open('mysession.bsave', 'rt') as f:
     for line in f:
         print(json.loads(line)['s'])
 "
-```
-
----
-
-## Project Structure
-
-```
-burpsaver/
-├── BurpSaver.py          # The extension — single file, load directly into Burp
-├── README.md             # This file
-├── USAGE.md              # Step-by-step usage guide with screenshots
-├── CHANGELOG.md          # Version history
-├── requirements.txt      # External dependencies (Jython JAR)
-└── .github/
-    └── ISSUE_TEMPLATE.md # Bug report template
 ```
 
 ---
