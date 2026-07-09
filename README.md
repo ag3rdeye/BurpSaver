@@ -80,7 +80,7 @@ jython-standalone-2.7.3.jar
 2. Click **Add**
 3. Set **Extension type** to `Python`
 4. Click **Select file** and choose `BurpSaver.py`
-5. Click **Next** — you should see `BurpSaver` appear as a new tab in Burp
+5. Click **Next** - you should see `BurpSaver` appear as a new tab in Burp
 
 ---
 
@@ -145,10 +145,10 @@ with gzip.open('mysession.bsave', 'rt') as f:
 
 ## Known Limitations
 
-- **Burp Community only target** — Burp Pro users can use BurpSaver but Pro's native save is more integrated
-- **No WebSocket history** — WebSocket frames are not currently captured
-- **Large sessions** — sessions with tens of thousands of requests may take a few seconds to load
-- **Jython 2.7 only** — Python 3 is not supported by Burp's extension API
+- **Burp Community only target** - Burp Pro users can use BurpSaver but Pro's native save is more integrated
+- **No WebSocket history** - WebSocket frames are not currently captured
+- **Large sessions** - sessions with tens of thousands of requests may take a few seconds to load
+- **Jython 2.7 only** - Python 3 is not supported by Burp's extension API
 
 ---
 
