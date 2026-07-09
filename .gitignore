@@ -1,0 +1,34 @@
+# BurpSaver .gitignore
+
+# Session files — these contain real HTTP traffic from real targets
+# NEVER commit these to a public repo
+*.bsave
+*.bsave.gz
+
+# Jython JAR — large binary, users download their own
+jython*.jar
+jython-standalone*.jar
+
+# Burp project files
+*.burp
+
+# Python cache (shouldn't exist in Jython context but just in case)
+__pycache__/
+*.py[cod]
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Test output
+test_output/
+*.log
